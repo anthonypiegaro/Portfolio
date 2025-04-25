@@ -28,6 +28,24 @@ export default function Home() {
     ["0%", "50%"]
   )
 
+  const projectProgressBar = useTransform(
+    scrollYProgress,
+    [0.2, 0.8],
+    ["0%", "60%"]
+  )
+
+  const projectProgressBarOpacity = useTransform(
+    scrollYProgress,
+    [0, 0.2],
+    [0, 1]
+  )
+
+  const projectProgressBarTop = useTransform(
+    scrollYProgress,
+    [0, 0.8, 1],
+    ["20%", "20%", "-80%"]
+  )
+
   return (
     <main className="w-dvw h-dvh bg-neutral-900 overflow-auto" ref={container} >
       <div className={`relative w-full h-full mx-auto max-w-prose px-4 pt-10 cursor-default sm:px-6 sm:text-lg md:text-xl md:pt-15 lg:px-0 lg:pt-20 lg:text-2xl ${quicksand.className}`}>
@@ -43,6 +61,12 @@ export default function Home() {
           <DownArrow/>
         </motion.div>
       </div>
+
+      <motion.div 
+        className="absolute left-4 md:left-6 lg:left-8 xl:left-10 w-[5px] bg-foreground h-10" 
+        style={{ height: projectProgressBar, opacity: projectProgressBarOpacity, top: projectProgressBarTop }} 
+      />
+
       <div className="flex justify-center items-center w-full h-full">
         <motion.div
           initial={{ opacity: 0 }}
