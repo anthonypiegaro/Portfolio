@@ -4,7 +4,6 @@ import { useRef } from "react"
 import { motion, useScroll, useTransform } from "motion/react"
 import { Quicksand } from "next/font/google"
 
-import { ContactForm } from "@/components/contact-form"
 import { DownArrow } from "@/components/down-arrow"
 import { PrettyLink } from "@/components/pretty-link"
 
@@ -103,9 +102,12 @@ export default function Home() {
         </motion.div>
       </div>
       <div className="flex justify-center items-center w-full h-full px-4" id="contact">
-        <motion.div className="w-full max-w-xl mx-auto border-2 rounded-lg border-forgound">
-          <ContactForm />
-        </motion.div>
+        <div className="flex items-center mx-auto">
+          <p className={`text-xl text-center ${quicksand.className}`}>
+            Contact me at <PrettyLink href="mailto:anthonypiegaro.dev@gmail.com">anthonypiegaro.dev@gmail.com</PrettyLink><br/>
+            (form coming soon)
+          </p>
+        </div>
       </div>
     </main>
   );
