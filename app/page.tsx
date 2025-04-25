@@ -62,7 +62,7 @@ export default function Home() {
       <div className={`relative w-full h-full mx-auto max-w-prose px-4 pt-10 cursor-default sm:px-6 sm:text-lg md:text-xl md:pt-15 lg:px-0 lg:pt-20 lg:text-2xl ${quicksand.className}`}>
         <p>
           Hey,<br/><br/>
-          Welcome to my portfolio. Here you can find a collection of my deployed work.
+          Welcome to my <PrettyLink href="https://github.com/anthonypiegaro/Portfolio" target="_blank">portfolio</PrettyLink>. Here you can find a collection of my deployed work.
           If you would like to contact me, you can fill out the <PrettyLink onClick={() => scrollToId("contact")}>form below</PrettyLink>, 
           or you can reach out to me on <PrettyLink href="https://www.linkedin.com/in/anthony-piegaro/" target="_blank">LinkedIn</PrettyLink>. 
           Thank you for visiting, 
