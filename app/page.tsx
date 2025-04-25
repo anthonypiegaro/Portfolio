@@ -71,7 +71,7 @@ export default function Home() {
       </div>
 
       <motion.div 
-        className="absolute left-4 md:left-6 lg:left-8 xl:left-10 w-[5px] bg-foreground h-10" 
+        className="absolute rounded-full left-4 md:left-6 lg:left-8 xl:left-10 w-[5px] bg-foreground h-10" 
         style={{ height: projectProgressBar, opacity: projectProgressBarOpacity, top: projectProgressBarTop }} 
       />
 
